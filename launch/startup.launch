@@ -1,0 +1,9 @@
+<launch>
+
+<node pkg="rosserial_python" type="serial_node.py" name="serial_node" args="/dev/ttyACM1" output="screen"/>
+
+<node pkg="um7" type="um7_driver" name="um7_driver" args="/dev/ttyUSB0" output="screen"/>
+
+<include file="$(find slam_sensing)/launch/freenect.launch"/> 
+
+</launch>
